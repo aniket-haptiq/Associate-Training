@@ -4,8 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment-1</title>
+    <style>
+        body{
+            background-color:#FFFFFF;
+            width: auto;
+            height: 1200px;
+            text-align: center;
+        }
+
+        /* Layout the header */
+        header {
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: #FFFFFF;
+        }
+
+        /* Align logo */
+        .logo a {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 50px; 
+            list-style: none;
+        }
+
+        .sub-menu ul {
+            display: flex;
+            gap: 30px; /* space between items */
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .sub-menu a {
+            text-decoration: none;
+            color: #25DAC5;
+            font-weight: 500;
+        }
+
+        #reg{
+            padding: 10px;
+            width: 100px;
+            border-radius: 15px;
+            color: #FFFFFF;
+            background-color: #25DAC5;
+        }
+
+        .tit{
+            width:fit-content;
+            font-size: 28px;
+            line-height: 70px;
+            letter-spacing: -1px;
+            text-align: center;
+
+        }
+
+
+    
+    </style>
 </head>
 <body>
-    <h1>Welcome to  Haptiq</h1>
+    <header>
+        <div class="logo">
+            <a href="#">Startup 3</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">Prices</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">F.A.Q.</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="sub-menu">
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a id="reg" href="#">Sign Up</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="tit">
+                <h1>Build Your Own Site Like a Lego Constructor</h1>
+            </div>
+
+            <div class="desc">
+                <p>
+                    We have created a new product that will help designers, developers and companies create websites for their startups quickly and easily.
+                </p>
+            </div>
+
+            <div class="btn">
+                <p>Create an Account</p>
+            </div>
+
+            <div class="lower">
+                <div class="imgs">
+                    <img src="" alt="image">
+                        <p>A high-quality solution for a beautiful startup website.</p>
+                    </img>
+                </div>
+                <div class="imgs">
+                    <img src="" alt="image">
+                        <p>Startups can save money on design and code and use those savings to develop the business.</p>
+                    </img>
+                </div>
+                <div class="imgs">
+                    <img src="" alt="image">
+                        <p>Startup Framework includes great form options for your startup projects.</p>
+                    </img>
+                </div>
+                
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </main>
+
+
 </body>
 </html>
