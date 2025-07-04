@@ -1,178 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment-1</title>
     <style>
-        body{
-            background-color:#FFFFFF;
-            width: auto;
-            height: 1200px;
-            text-align: center;
-        }
 
-        /* Layout the header */
-        header {
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "DM Sans", sans-serif;
+        }
+        /* Header container css */
+        .header-container {
+            width: 990px;
+            margin: 14px auto;
             display: flex;
-            justify-content:space-between;
+            padding: 12px;
+            /* border:2px solid red; */
             align-items: center;
-            padding: 10px 30px;
-            background-color: #FFFFFF;
         }
-
-        /* Align logo */
-        .logo a {
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            color: #333;
-        }
-
-        nav ul {
+        .header-container header {
             display: flex;
-            gap: 50px; 
-            list-style: none;
+            width: 100%;
+            padding: 12px 12px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
         }
-
-        .sub-menu ul {
+        header span{
+            font-weight:800;
+            color: #1E0E62;
+            font-size: 24px;
+        }
+        .nav-links {
             display: flex;
-            gap: 30px;
+        }
+        .nav-items {
+            color: #15143966;
+            margin: 0 23px;
+            width: 33px;
             list-style: none;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
+            font-family: "DM Sans", sans-serif;
             font-weight: 500;
-        }
+            font-size: 18px;
 
-        .sub-menu a {
-            text-decoration: none;
-            color: #25DAC5;
-            font-weight: 500;
         }
-
-        #reg{
+        .nav-items:hover{
+            text-decoration:underline;
+            cursor:pointer;
+        }
+        .btn {
+            margin: 0 12px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        .btn-primary {
+            outline: none;
+            border: none;
+            background-color: #fff;
+            color: #25dac5;
+            cursor: pointer;
+        }
+        .btn-second {
             padding: 10px;
             width: 100px;
-            border-radius: 25px;
-            color: #FFFFFF;
-            background-color: #25DAC5;
-        }
-
-        .tit{
-            width:fit-content;
-            font-size: 28px;
-            line-height: 70px;
-            letter-spacing: -1px;
+            border: none;
+            border-radius: 25px 25px 25px 25px;
+            background-color: #25dac5;
+            color: white;
+            font-weight: 500;
+            font-size: 18px;  
             text-align: center;
+            cursor: pointer;
+        }
+        /* main container css */
+        .main-container .section-1 {
+            width: 990px;
+            /* border:2px solid red; */
+            margin:0 auto 100px auto ;
+            display: flex;
+            padding: 12px;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section-1 h1 {
+            text-align: center;
+            color: #1e0e62;
+            width: 700px;
+            font-size: 58px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .section-1 p {
+            width: 600px;
+            font-size: 22px;
+            text-align: center;
+            color: #15143966;
+            margin-bottom: 4rem;
+        }
+        .section-1 a {
+            text-decoration: none;
+            background: #e93a7d;
+            width: 180px;
+            text-align: center;
+            padding: 20px 45px;
+            border-radius: 45px;
+            margin-right:40px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
 
         }
+        .main-container .section-2 {
+            width: 990px;
+            padding: 12px;
+            margin: 0 auto;
+        }
+        .main-container .section-2 ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        .section-2 ul li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        li img {
+            width: 180px;
+            align-items: center;
+            margin-bottom: 30px;
+        
+        }
+        li p {
+            text-align: center;
+            font-size: 18px;
+            width: 220px;
+            color: #15143966;
+        }
+        .lines {
+            border-right: 2px solid #ebeaed;
+            border-left: 2px solid #ebeaed;
+            padding: 0 100px;
+        }
 
-    .imgs {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-bottom: 50px;
-    }
-
-    .imgs {
-      text-align: center;
-      max-width: 200px;
-    }
-
-    .imgs img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    .imgs p {
-      font-size: 14px;
-      color: #555;
-    }
-
-
-    
     </style>
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <a href="#">Startup 3</a>
-        </div>
+  </head>
 
+  <body>
+    <div class="header-container">
+      <header>
+        <!-- <img src="/img/logo.svg" alt="logo" /> -->
+         <span>Startup 3</span>
         <nav>
-            <ul>
-                <li><a href="#">Tour</a></li>
-                <li><a href="#">Prices</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">F.A.Q.</a></li>
-                <li><a href="#">Support</a></li>
-            </ul>
+          <ul class="nav-links">
+            <li class="nav-items">Tour</li>
+            <li class="nav-items">Prices</li>
+            <li class="nav-items">About</li>
+            <li class="nav-items">F.A.Q.</li>
+            <li class="nav-items">Support</li>
+          </ul>
         </nav>
-
-
-        <div class="sub-menu">
-            <ul>
-                <li><a href="#">Login</a></li>
-                <li><a id="reg" href="#">Sign Up</a></li>
-            </ul>
+        <div class="header-btns">
+          <button class="btn btn-primary">LogIn</button>
+          <button class="btn btn-second">Sign Up</button>
         </div>
-    </header>
+      </header>
+    </div>
 
-    <main>
-        <div class="container">
-            <div class="tit">
-                <h1>Build Your Own Site Like a Lego Constructor</h1>
-            </div>
+    <main class="main-container">
+      <section class="section-1">
+        <h1>Build Your Own Site like a Lego Constructor</h1>
+        <p>
+          We have created a new product that will help designers, developers and
+          companies create websites for their startups quickly and easily.
+        </p>
+        <a href="#" target="_blank">Create an Account</a>
+      </section>
 
-            <div class="desc">
-                <p>
-                    We have created a new product that will help designers, developers and companies create websites for their startups quickly and easily.
-                </p>
-            </div>
-
-            <div class="btn">
-                <p>Create an Account</p>
-            </div>
-
-            <div class="lower">
-                <div class="imgs">
-                    <img src="../static/img/p1.jpg" alt="image"/>
-                        <p>A high-quality solution for a beautiful startup website.</p>
-                    
-                </div>
-                <div class="imgs">
-                    <img src="../static/img/p2.jpg" alt="image"/>
-                        <p>Startups can save money on design and code and use those savings to develop the business.</p>
-                   
-                </div>
-                <div class="imgs">
-                    <img src="../static/img/p3.jpg" alt="image"/>
-                        <p>Startup Framework includes great form options for your startup projects.</p>
-                    
-                </div>
-                
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
+      <section class="section-2">
+        <ul>
+          <li>
+            <img src="/static/img/p1.jpg" alt="image" />
+            <p>A high-quality solution for a beautiful startup website.</p>
+          </li>
+          <li >
+            <img class="lines" src="/static/img/p2.jpg" alt="image" />
+            <p>
+              Startups can save money on design and code and use those savings
+              to develop the business.
+            </p>
+          </li>
+          <li>
+            <img src="/static/img/p3.jpg" alt="image" />
+            <p>
+              Startup Framework includes great form options for your startup
+              projects.
+            </p>
+          </li>
+        </ul>
+      </section>
     </main>
-
-
-</body>
+  </body>
 </html>
