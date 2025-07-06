@@ -41,13 +41,13 @@
             color: #15143966;
             margin: 0 23px;
             width: 33px;
+            text-decoration:none;
             list-style: none;
             font-family: "DM Sans", sans-serif;
-            font-weight: 500;
             font-size: 18px;
 
         }
-        .nav-items:hover{
+        .nav-items a:hover{
             text-decoration:none;
             cursor:pointer;
         }
