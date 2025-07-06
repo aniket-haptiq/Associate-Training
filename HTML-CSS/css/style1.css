@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment-1</title>
-    <style>
 
-        * {
+* {
             margin: 0;
             padding: 0;
             font-family: "DM Sans", sans-serif;
@@ -55,7 +48,7 @@
 
         }
         .nav-items:hover{
-            text-decoration:underline;
+            text-decoration:none;
             cursor:pointer;
         }
         .btn {
@@ -162,66 +155,3 @@
             height: 109px;
             padding: 0 100px;
         }
-
-    </style>
-  </head>
-
-  <body>
-    <div class="header-container">
-      <header>
-        <!-- <img src="/img/logo.svg" alt="logo" /> -->
-         <span><a href="">Startup 3</a></span>
-        <nav>
-          <ul class="nav-links">
-            <li class="nav-items">Tour</li>
-            <li class="nav-items">Prices</li>
-            <li class="nav-items">About</li>
-            <li class="nav-items">F.A.Q.</li>
-            <li class="nav-items">Support</li>
-          </ul>
-        </nav>
-        <div class="header-btns">
-          <button class="btn btn-primary">LogIn</button>
-          <button class="btn btn-second">Sign Up</button>
-        </div>
-      </header>
-    </div>
-
-    <main class="main-container">
-      <section class="section-1">
-        <h1>Build Your Own Site like a Lego Constructor</h1>
-        <p>
-          We have created a new product that will help designers, developers and
-          companies create websites for their startups quickly and easily.
-        </p>
-        <a href="#" target="_blank">Create an Account</a>
-      </section>
-
-      <section class="section-2">
-        <ul>
-          <li>
-            <img src="/static/img/p1.jpg" alt="image" />
-            <p>A high-quality solution for a beautiful startup website.</p>
-          </li>
-          <li >
-            <div class="lines">
-                <img src="/static/img/p2.jpg" alt="image" />
-            <p>
-              Startups can save money on design and code and use those savings
-              to develop the business.
-            </p>
-            </div>
-            
-          </li>
-          <li>
-            <img src="/static/img/p3.jpg" alt="image" />
-            <p>
-              Startup Framework includes great form options for your startup
-              projects.
-            </p>
-          </li>
-        </ul>
-      </section>
-    </main>
-  </body>
-</html>
