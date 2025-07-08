@@ -291,3 +291,7 @@ footer a {
   font-weight: 400;
   padding: 8px 24px;
 }
+
+.lGo:hover {
+  cursor: pointer;
+}
