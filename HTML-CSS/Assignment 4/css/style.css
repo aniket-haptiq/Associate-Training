@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: white;
+}
+.brandName a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  background-color: #0f172a;
+  padding: 20px 0;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navLinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navLinks a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.navSub{
+    padding-left: 200px;
+}
+
+.btnPrimary {
+  background-color: #00bfff;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btnSecondary {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.heroSection {
+  padding: 100px 0;
+  text-align: left;
+  width: 100%;
+  height: 100vh;
+ background: /*linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(14, 8, 22, 0.2)),  */  url("../img/background.jpg") no-repeat center center/cover;
+  margin-top: -120px;
+
+}
+
+.heroContent h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.heroContent p {
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.featuresSection {
+  background-color: #111827;
+  padding: 60px 0;
+}
+
+.featuresContainer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 40px 50px;
+  
+}
+
+.featureBox {
+  width: 329px;
+}
+.featureBox h5{
+    font-size: 16px;
+    line-height: 2.5;
+}
+
+.featureBox p{
+    font-size: 14px;
+}
+
+.featureBox img{
+    width: 72px;
+    height: 59px;
+}
+
+.testimonialSection, .projectSection {
+  padding: 60px 0;
+  background-color: #1f2937;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.sectionSubTitle {
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.testimonialContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.testimonialCard {
+  background-color: #374151;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  color: white;
+}
+
+.userImage {
+  border-radius: 50%;
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.projectCards {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.projectCard {
+  width: 23%;
+  background-color: #111827;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  color: white;
+}
+
+.projectCard img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.footerSection {
+  background-color: #0f172a;
+  padding: 60px 0;
+  color: #d1d5db;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
