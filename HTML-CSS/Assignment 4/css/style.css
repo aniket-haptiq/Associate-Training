@@ -31,6 +31,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 .navLinks{
     display: flex;
     justify-content: space-between;
@@ -52,6 +53,7 @@ body {
   border-radius: 25px;
   text-decoration: none;
   padding: 15px 36px;
+  font-weight: 800;
 }
 
 .btnSecondary {
@@ -62,6 +64,7 @@ body {
   border-radius: 25px;
   text-decoration: none;
   padding: 15px 36px;
+  font-weight: 800;
 }
 
 .btnRegister{
@@ -106,7 +109,6 @@ body {
 
 .bannerButtons a{
   color: #FFFFFF;
-  font-weight: 800;
   text-decoration: none;
 }
 
@@ -146,12 +148,6 @@ body {
   text-align: center;
 }
 
-.projectSection {
-  padding: 112px 0;
-  background-color: #252B42;
-  text-align: center;
-}
-
 .secTitle{
   color: #FFFFFF;
   align-items: center;
@@ -168,12 +164,14 @@ body {
   font-size: 14px;
 }
 
-.testimonialContainer {
+.teamContainer {
   display: flex;
+  text-align: left;
   justify-content: space-around;
 }
 
-.testimonialCard {
+.teamCard {
+  display: flex;
   background-color: #FFFFFF;
   padding: 30px 40px;
   width: 450px;
@@ -181,37 +179,61 @@ body {
   gap: 15px;
 }
 
-.userImage {
+.userPro{
   border-radius: 50%;
-  width: 50px;
+  margin-left: -80px;
   margin-bottom: 10px;
+}
+
+.userData {
+  border-radius: 50%;
+  width: 100%;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+
+
+.projectSection {
+  padding: 112px 0;
+  background-color: #252B42;
+  text-align: center;
+  border-bottom: 1px solid white;
 }
 
 .projectCards {
   display: flex;
   justify-content: space-between;
   gap: 15px;
-  flex-wrap: wrap;
 }
 
 .projectCard {
-  width: 23%;
-  background-color: #111827;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: left;
+  width: 100%;
   color: white;
 }
 
 .projectCard img {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
+}
+
+.projectCard a {
+  text-decoration: none;
+  color: white;
+}
+
+/* .cardImg{
+  position: relative;
+
+} */
+
+.cardData h5 p {
+  position: absolute;
+  text-align: left;
 }
 
 .footerSection {
-  background-color: #0f172a;
-  padding: 60px 0;
+  background-color: #252B42;
+  padding: 50px 0;
   color: #d1d5db;
 }
 
@@ -219,4 +241,21 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 20px;
+  line-height: 24px;
+}
+
+.footerContainer h5{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footerContainer ul li{
+  list-style: none;
+  font-size: 14px;
+}
+
+.footerContainer img{
+  width: 24px;
+  height: 24px;
 }
