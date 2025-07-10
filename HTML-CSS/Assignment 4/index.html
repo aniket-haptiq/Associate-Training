@@ -8,36 +8,37 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="headerSec">
-    <div class="container">
-      <div class="navBar">
-    
-        <div class="brandName">
-            <a href="#"><h1>BrandName</h1></a>            
-        </div>
-           <div class="navLinks">
-                <nav>
-                    <a href="#">Home</a>
-                    <a href="#">Product</a>
-                    <a href="#">Pricing</a>
-                    <a href="#">Contact</a>
-                </nav>
-            </div>
-        
-            <div class="navSub">
-                <nav>
-                    <a href="#">Login</a>
-                    <div class="btnRegister">
-                      <a href="#">Become a Member</a>
-                      <img src="img/arrow.svg" alt="arrow">
-                    </div>
-                </nav>
-            </div>
-        </div>        
-      </div>
+<!-- Header -->
+<header class="headerSec">
+  <div class="container navWrapper">
+
+    <!-- Left: Brand -->
+    <div class="navLeft brandName">
+      <a href="#"><h3>BrandName</h3></a>
     </div>
-  </header>
+
+    <!-- Center: Navigation -->
+    <nav class="navCenter">
+      <ul class="navList">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right: Login & Button -->
+    <div class="navRight">
+      <a href="#" class="loginLink">Login</a>
+      <a href="#" class="btnRegister">
+        Become a member
+        <img src="img/arrow.svg" alt="arrow" class="arrowIcon">
+      </a>
+    </div>
+
+  </div>
+</header>
+
 
   <!-- Banner Section -->
   <section class="bannerSection">
@@ -91,9 +92,11 @@
             <img src="img/circle-box (1).svg" alt="User">
           </div>
           <div class="userData">
-            <h4>Regina Miles</h4>
-            <p>Designer</p>
-            <p>★★★★☆</p>
+            <h3>Regina Miles</h3>
+            <span>Designer</span>
+            <div>
+               <img src="img/stars.svg" alt="star-image">
+            </div>
             <p >
               This proved to be impossible using the traditional concepts of space and time. Einstein developed a new view of time first and then space.
             </p>
@@ -104,9 +107,11 @@
             <img src="img/circle-box.svg" alt="User">
           </div>
           <div class="userData">
-            <h4>Regina Miles</h4>
-            <p >Designer</p>
-            <p >★★★★☆</p>
+            <h3>Regina Miles</h3>
+            <span>Designer</span>
+            <div>
+               <img src="img/stars.svg" alt="star-image">
+            </div>
             <p>
               This proved to be impossible using the traditional concepts of space and time. Einstein developed a new view of time first and then space.
             </p>
@@ -125,46 +130,42 @@
       </div>     
       <div class="projectCards">
         <div class="projectCard">
-          <div class="cardImg">
-            <img src="img/media bg-cover.svg" alt="image">            
-          </div>
-          <div class="cardData">
-            <h5>Tax Management</h5>
-            <p>Life Tips From Top Ten Adventure Travelers</p>
-            <div class="btnPrimary"><a href="#">View Project</a></div>
-          </div>
-        </div>
-
-        <div class="projectCard">
-          <div class="cardImg">
-            <img src="img/media bg-cover (2).svg" alt="image">            
-          </div>
-          <div class="cardData">
-            <h5>Tax Management</h5>
-            <p>Life Tips From Top Ten Adventure Travelers</p>
-            <div class="btnPrimary"><a href="#">View Project</a></div>
+          <div class="cardImg1">       
+            <div class="cardData">
+            <h6>Tax Management</h6>
+            <h4>Life Tips From Top Ten Adventure Travelers</h4>
+            <div class="btnMore"><a href="#">View Project</a></div>
+            </div>
           </div>
         </div>
 
         <div class="projectCard">
-          <div class="cardImg">
-            <img src="img/media bg-cover (1).svg" alt="image">            
-          </div>
+          <div class="cardImg2">
           <div class="cardData">
-            <h5>Tax Management</h5>
-            <p>Life Tips From Top Ten Adventure Travelers</p>
-            <div class="btnPrimary"><a href="#">View Project</a></div>
+            <h6>Tax Management</h6>
+            <h4>Life Tips From Top Ten Adventure Travelers</h4>
+            <div class="btnMore"><a href="#">View Project</a></div>
+          </div>
           </div>
         </div>
 
         <div class="projectCard">
-          <div class="cardImg">
-            <img src="img/media bg-cover (3).svg" alt="image">            
-          </div>
+          <div class="cardImg3">         
           <div class="cardData">
-            <h5>Tax Management</h5>
-            <p>Life Tips From Top Ten Adventure Travelers</p>
-            <div class="btnPrimary"><a href="#">View Project</a></div>
+            <h6>Tax Management</h6>
+            <h4>Life Tips From Top Ten Adventure Travelers</h4>
+            <div class="btnMore"><a href="#">View Project</a></div>
+          </div>
+          </div>
+        </div>
+
+        <div class="projectCard">
+          <div class="cardImg4">
+          <div class="cardData">
+            <h6>Tax Management</h6>
+            <h4>Life Tips From Top Ten Adventure Travelers</h4>
+            <div class="btnMore"><a href="#">View Project</a></div>
+          </div>
           </div>
         </div>
       </div>
