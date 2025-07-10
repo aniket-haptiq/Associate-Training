@@ -237,7 +237,7 @@ body {
 }
 
 .projectCard {
-
+  
   color: white;
 }
 
@@ -266,9 +266,12 @@ body {
 }
 
 .cardData{
-  padding: 10px 20px;
-  text-align: left;
+  /* padding-top: 265px;
+  padding: 10px 20px; */
+  padding-top: 265px;
+  padding-left: 10px;
   gap: 15px;
+  text-align: left;
   line-height: 30px;
 }
 
@@ -365,8 +368,7 @@ body {
   }
 
   .navRight {
-    flex-direction: column;
-    gap: 15px;
+    display: none;
   }
 
   .bannerContent h1 {
@@ -399,6 +401,10 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+  }
+
+  .userPro{
+    display: none;
   }
 
   .projectCards {
