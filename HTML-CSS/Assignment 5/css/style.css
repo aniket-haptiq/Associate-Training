@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+
+* {
+  font-family: "Heebo", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f8f8;
+  color: #000000;
+}
+
+header {
+  padding: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.con {
+  display: flex;
+  justify-content: space-between;
+  gap: 300px;
+}
+
+.navLeft a {
+  font-weight: bold;
+  font-size: x-large;
+  text-decoration: none;
+  color: #000000;
+}
+
+.navRight a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+  margin-right: 20px;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.introText {
+  width: 506px;
+}
+
+.introText h1 {
+  font-size: 44px;
+  margin-bottom: 30px;
+  line-height: 60px;
+}
+
+.introText p {
+  margin-bottom: 30px;
+  color: #21243D;
+  line-height: 1.5;
+}
+
+.btn {
+  background-color: #ff6464;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.introImg img {
+  width: 243px;
+  height: 243px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.recentPosts {
+  background-color: #edf7fa;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.sectionHeader h2 {
+  font-size: 24px;
+  color: #000000;
+}
+
+.viewAll {
+  color: #00a8cc;
+  text-decoration: none;
+}
+
+.posts {
+  display: flex;
+  gap: 20px;
+}
+
+.post {
+  width: 50%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.post h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.post .meta {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.featuredWorks h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.work {
+  display: flex;
+  gap: 20px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.borLine {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.work img {
+  width: 246px;
+  height: 180px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.workText h3 a {
+  margin-bottom: 5px;
+  font-size: 30px;
+  text-decoration: none;
+  color: #21243D;
+}
+
+.badge {
+  background-color: black;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 16px;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.category {
+  color: gray;
+  font-size: 20px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #21243D;
+}
+
+.socialIcon a {
+  width: 24px;
+  margin: 10px;
+}
+
+.socialIcon img{
+  width: 30px;
+  height: 30px;
+}
+
+/* ===== Responsive Styling ===== */
+
+/* Medium Devices (up to 992px) */
+@media (max-width: 992px) {
+  .con {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .introText {
+    width: 100%;
+    text-align: center;
+  }
+
+  .introText h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .introImg img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .posts {
+    flex-direction: column;
+  }
+
+  .post {
+    width: 100%;
+  }
+
+  .work {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .work img {
+    width: 100%;
+    height: auto;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .navRight a {
+    margin-right: 15px;
+  }
+}
+
+/* Small Devices (up to 768px) */
+@media (max-width: 768px) {
+  .introText h1 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .introText p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .introImg img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .work {
+    gap: 10px;
+  }
+
+  .workText {
+    width: 100%;
+  }
+
+  .navRight {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .badge,
+  .category {
+    display: block;
+    margin: 5px auto;
+  }
+
+  footer .social {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
