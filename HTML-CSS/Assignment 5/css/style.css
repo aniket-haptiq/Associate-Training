@@ -205,13 +205,6 @@ footer {
 /* Medium Devices (up to 992px) */
 @media (max-width: 992px) {
   
-.nav {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-
   .con {
     flex-direction: column-reverse;
     align-items: center;
