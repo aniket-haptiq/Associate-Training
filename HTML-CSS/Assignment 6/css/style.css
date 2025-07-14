@@ -442,11 +442,8 @@ footer{
 
   .corpTeam {
     flex-direction: column;
+    align-items: center;
     gap: 30px;
-  }
-
-  .memberCard {
-    text-align: center;
   }
 
   footer {
@@ -486,7 +483,7 @@ footer{
   }
 
   .layoutBanner {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     text-align: center;
     gap: 40px;
