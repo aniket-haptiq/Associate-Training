@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Heebo:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Heebo:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   font-family: 'Crimson Text', sans-serif;
   margin: 0;
@@ -134,6 +135,11 @@ footer{
   margin-bottom: 73px;
 }
 
+.partnerLogo img{
+  object-fit: cover;
+  width: 100%;
+}
+
 .partnerLogo ul{
     display: flex;
     gap: 70px;
@@ -146,32 +152,32 @@ footer{
 }
 
 .metaData label{
-font-family: Work Sans;
-color: #74C69D;
-font-weight: 700;
-font-style: Bold;
-font-size: 16px;
-line-height: 125%;
-letter-spacing: 5px;
-text-transform: uppercase;
-margin-bottom: 16px;
+  font-family: Work Sans;
+  color: #74C69D;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
+
 .metaData h2{
-font-family: Crimson Text;
-font-weight: 700;
-font-style: Bold;
-font-size: 40px;
-line-height: 125%;
-margin-bottom: 16px;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 40px;
+  line-height: 125%;
+  margin-bottom: 16px;
 }
 
 .metaData p{
-font-family: Work Sans;
-font-weight: 400;
-font-style: Regular;
-font-size: 20px;
-line-height: 125%;
-margin-bottom: 55px;
+  font-family: Work Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  line-height: 125%;
+  margin-bottom: 55px;
 }
 
 .btnLearnMore a{
@@ -205,20 +211,20 @@ margin-bottom: 55px;
 }
 
 .featureText h2{
-font-weight: 700;
-font-style: Bold;
-font-size: 40px;
-line-height: 125%;
-margin-bottom: 16px;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 40px;
+  line-height: 125%;
+  margin-bottom: 16px;
 }
 .featureText p{
-font-family: Work Sans;
-font-weight: 400;
-font-style: Regular;
-font-size: 15px;
-line-height: 125%;
-color: #21252980;
-margin-bottom: 16px;
+  font-family: Work Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 15px;
+  line-height: 125%;
+  color: #21252980;
+  margin-bottom: 16px;
 }
 
 .featureImage img{
@@ -300,6 +306,7 @@ margin-bottom: 16px;
 
 .planDetails{
   display: flex;
+  width: 100%;
   gap: 105px;
   margin-bottom: 135px;
 }
@@ -454,6 +461,105 @@ margin-bottom: 16px;
   }
 
   .planCard {
+    padding: 30px 20px;
+  }
+
+  .planFeature ul {
+    padding-left: 0;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .navRight ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .layoutBanner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    margin: 30px 0 60px 0;
+  }
+
+  .intoText {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .introImage img {
+    width: 100%;
+    height: auto;
+  }
+
+  .partnerLogo ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .layoutFeature {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin: 50px 0;
+  }
+
+  .featureImage img {
+    width: 100%;
+    height: auto;
+  }
+
+  .featureText {
+    text-align: center;
+    margin: 0;
+  }
+
+  .corpTeam {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .memberCard {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .planDetails {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .planCard {
+    width: 100%;
+    max-width: 400px;
     padding: 30px 20px;
   }
 
