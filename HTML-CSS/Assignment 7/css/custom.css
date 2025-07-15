@@ -19,25 +19,56 @@ body {
 }
 
 .navRight a{
-    color: #ffffff;
+    color: #FFFFFF;
     font-family: Work Sans;
     font-weight: 400;
     font-style: Regular;
     font-size: 20px;
     line-height: 125%;
     text-align: right;
+}
 
+.banText {
+  color: #FFFFFF;
+  gap: 25px;
 }
-.text-muted {
-    font-family: Work Sans;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 16px;
-    line-height: 125%;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #FFFFFF;
+
+.banText h6{
+  color: #FFFFFF;
+  font-family: Work Sans;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 5px;
+  text-transform: uppercase;
 }
+
+.banText h2{
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 40px;
+  line-height: 1.25;
+}
+
+.banText p{
+  font-family: Work Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 15px;
+  line-height: 125%;
+}
+
+.btnExpo{
+  padding: 7px 30px  ;
+  border-radius: 5px;
+}
+
+
+
+
+
+
 
 .socialIcon img{
     object-fit: contain;
