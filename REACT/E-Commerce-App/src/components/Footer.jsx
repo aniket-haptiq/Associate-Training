@@ -3,12 +3,12 @@ import vite from '../assets/vite.svg';
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light py-4 mt-5 align-bottom">
-      <div className="container text-center">
+    <footer className="bg-dark text-light py-4 mt-5 position-relative align-bottom">
+      <div className="container text-center ">
         <div className="row mb-3">
           <div className="col-md-4">
             <div className="logo">
-                <img src={vite} alt="ShopEasy Logo" width="75" height="75" className="d-inline-block align-top me-2" />
+                <img src={vite} alt="AniketMart-Logo" width="75" height="75" className="d-inline-block align-top me-2" />
                 <h5>AniketMart</h5>
             </div>
             <p>Your one-stop shop for all your needs.</p>
@@ -32,7 +32,8 @@ const Footer = () => {
         <hr className="border-light" />
         <p className="mb-0">&copy; {new Date().getFullYear()} AniketMart. All rights reserved.</p>
       </div>
-    </footer>
+    </footer>    
+
   );
 };
 

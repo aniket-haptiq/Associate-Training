@@ -6,12 +6,16 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState: initial,
   reducers: {
-    addItem(state, action) {
-      const exist = state.items.find(i => i.id === action.payload.id);
-      if (exist) exist.qty += 1;
-      else state.items.push({ ...action.payload, qty: 1 });
-      localStorage.setItem('cart', JSON.stringify(state.items));
-    },
+    addItem: (state, action) => {
+      const item = action.payload;
+      const existing = state.items.find(i => i.id === item.id);
+      if (existing) {
+        existing.qty += item.qty || 1;
+      } else {
+        state.items.push({ ...item, qty: item.qty || 1 });
+      }
+    }    
+    ,
     removeItem(state, action) {
       state.items = state.items.filter(i => i.id !== action.payload);
       localStorage.setItem('cart', JSON.stringify(state.items));
