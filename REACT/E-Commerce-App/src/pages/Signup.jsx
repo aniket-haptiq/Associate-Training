@@ -16,7 +16,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="container mt-5" style={{ maxWidth: '400px' }}>
+    <div className="container mt-5 mb-5 bg-dark text-light text-center py-3" style={{ maxWidth: '400px' }}>
       <h3 className="mb-4">Sign Up</h3>
       <form onSubmit={handleSignup}>
         <input type="text" className="form-control mb-3" placeholder="Name" value={name} onChange={e => setName(e.target.value)} required />

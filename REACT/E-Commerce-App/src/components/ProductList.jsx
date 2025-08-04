@@ -8,8 +8,13 @@ const ProductList = () => {
   const dispatch = useDispatch();
 
   if (!products.length) {
-    return <p>No products found.</p>;
-  }
+  return (
+    <div className="alert alert-warning alert-dismissible fade show text-center my-4 h-100" role="alert">
+      <strong>No products found!</strong> Try adjusting your filters or check back later.
+      <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  );
+}
 
   return (
     <div className="row">
@@ -24,6 +29,7 @@ const ProductList = () => {
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{product.title}</h5>
                 <p className="card-text">₹{product.price}</p>
+                {/* <p className="card-text">{product.}</p> */}
                 <div className="mt-auto">
                   <button className="btn btn-primary me-2" onClick={() => dispatch(addItem(product))}>
                     Add to Cart

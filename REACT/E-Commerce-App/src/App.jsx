@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Billing from './pages/Billing';
 import NotFound from './pages/NotFound';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/billing" element={<Billing />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 };

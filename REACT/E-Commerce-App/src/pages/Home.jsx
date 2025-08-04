@@ -31,8 +31,8 @@ const Home = () => {
 
       <div className="mb-4">
         {categories.map(cat => (
-          <button key={cat} className="btn btn-outline-secondary me-2 mb-2" onClick={() => handleFilter(cat)}>
-            {cat}
+          <button key={cat.id} className="btn btn-outline-secondary me-2 mb-2" onClick={() => handleFilter(cat.id)}>
+            {cat.name}
           </button>
         ))}
         <button className="btn btn-outline-primary mb-2" onClick={() => dispatch(loadProducts())}>
