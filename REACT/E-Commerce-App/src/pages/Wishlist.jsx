@@ -10,8 +10,16 @@ const Wishlist = () => {
     <div className="container mt-4">
       <h2>Your Wishlist</h2>
       {wishlist.length === 0 ? (
-        <p>Your wishlist is empty.</p>
-      ) : (
+          <div className="d-flex justify-content-center align-items-center min-vh-50">
+            <div className="alert alert-info text-center w-100 w-sm-75 w-md-50 p-4 shadow-sm">
+              <h4 className="alert-heading">Your Wishlist is Empty</h4>
+              <p className="mb-3">Looks like you haven’t added any items yet.</p>
+              <a href="/products" className="btn btn-primary btn-sm">
+                Browse Products
+              </a>
+            </div>
+          </div>
+) : (
         <div className="row">
           {wishlist.map(product => (
             <div key={product.id} className="col-md-4 mb-3">

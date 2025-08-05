@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light mb-3 shadow-sm position-sticky">
+    <nav className="navbar navbar-expand-lg navbar-dark	bg-dark mb-3 shadow-sm position-sticky">
       <div className="container">
         <Link className="navbar-brand" to="/">
           <img src={vite} alt="ShopEasy Logo" className="d-inline-block align-top me-2" />

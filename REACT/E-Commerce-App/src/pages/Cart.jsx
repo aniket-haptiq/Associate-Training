@@ -29,14 +29,44 @@ const Cart = () => {
 )
  : (
         <>
-          <ul className="list-group mb-4">
-            {cart.map(item => (
-              <li key={item.id} className="list-group-item d-flex justify-content-between align-items-center">
-                {item.title} (x{item.qty}) - ₹{item.price * item.qty}
-                <button className="btn btn-sm btn-danger" onClick={() => handleRemove(item.id)}>Remove</button>
-              </li>
-            ))}
-          </ul>
+          <table className="table table-bordered table-hover mb-4 text-center">
+              <thead className="table-light">
+                <tr>
+                  <th scope="col">Image</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {cart.map(item => (
+                  <tr key={item.id}>
+                    <td>
+                      <img
+                        src={item.thumbnail}
+                        alt={item.title}
+                        style={{ width: '50px', height: '50px', objectFit: 'contain' }}
+                      />
+                    </td>
+                    <td>{item.title}</td>
+                    <td>{item.qty}</td>
+                    <td>₹{item.price}</td>
+                    <td>₹{item.price * item.qty}</td>
+                    <td>
+                      <button
+                        className="btn btn-sm btn-danger"
+                        onClick={() => handleRemove(item.id)}
+                      >
+                        Remove
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+          </table>
+
           <div className="text-end">
             <button className="btn btn-success" onClick={handleBuyAll}>Buy All</button>
           </div>
