@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchProducts, fetchCategories, fetchProductsByCategory, searchProducts } from '../api/productsApi';
+import { fetchProducts, fetchCategories,searchProducts } from '../api/productsApi';
 
 export const loadProducts = createAsyncThunk('products/load', async () => {
   return await fetchProducts();
@@ -7,9 +7,7 @@ export const loadProducts = createAsyncThunk('products/load', async () => {
 export const loadCategories = createAsyncThunk('products/loadCats', async () => {
   return await fetchCategories();
 });
-export const loadByCategory = createAsyncThunk('products/loadByCat', async (cat) => {
-  return await fetchProductsByCategory(cat);
-});
+
 export const doSearch = createAsyncThunk('products/search', async (term) => {
   return await searchProducts(term);
 });
@@ -25,7 +23,6 @@ const productSlice = createSlice({
     builder
       .addCase(loadProducts.fulfilled, (state, action) => { state.list = action.payload; })
       .addCase(loadCategories.fulfilled, (state, action) => { state.categories = action.payload; })
-      .addCase(loadByCategory.fulfilled, (state, action) => { state.list = action.payload; })
       .addCase(doSearch.fulfilled, (state, action) => { state.list = action.payload; });
   }
 });

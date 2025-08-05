@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import { createBrowserRouter } from 'react-router-dom';
+import Layout from './components/Layout';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import ProductDetails from './pages/ProductDetails';
@@ -9,26 +9,30 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Billing from './pages/Billing';
 import NotFound from './pages/NotFound';
-import Footer from './components/Footer';
+import PrivateRoute from './components/PrivateRoute';
 
-const App = () => {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<ProductDetails />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/billing" element={<Billing />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer/>
-    </Router>
-  );
-};
+const App = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    errorElement: <NotFound />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'products', element: <Products /> },
+      { path: 'products/:id', element: <ProductDetails /> },
+      { path: 'login', element: <Login /> },
+      { path: 'signup', element: <Signup /> },
+
+      {
+        element: <PrivateRoute />,
+        children: [
+          { path: 'cart', element: <Cart /> },
+          { path: 'wishlist', element: <Wishlist /> },
+          { path: 'billing', element: <Billing /> },
+        ],
+      },
+    ],
+  },
+]);
 
 export default App;

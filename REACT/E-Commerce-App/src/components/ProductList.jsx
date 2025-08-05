@@ -33,8 +33,9 @@ const ProductList = () => {
               <img src={imgSrc} className="card-img-top" alt={product.title} />
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{product.title}</h5>
-                <p className="card-text">₹{product.price}</p>
-               <div className="input-group mb-2" style={{ maxWidth: '120px' }}>
+               
+                 <p className="card-text">Rating | {product.rating}</p>
+               <div className="input-group mb-2" style={{ maxWidth: '150px' }}>
                   <button
                     className="btn btn-outline-secondary"
                     type="button"
@@ -55,7 +56,9 @@ const ProductList = () => {
                   >
                     +
                   </button>
+                  
               </div>
+              <p className="card-text">₹{product.price}</p>
 
                 <div className="mt-auto">
                   <button className="btn btn-primary me-2" onClick={() => dispatch(addItem({ ...product, qty }))}>

@@ -12,11 +12,6 @@ export const fetchCategories = async () => {
   return data;
 };
 
-export const fetchProductsByCategory = async (cat) => {
-  const { data } = await axios.get(`${BASE}/products/category/${cat}`);
-  return data.products;
-};
-
 export const searchProducts = async (q) => {
   const { data } = await axios.get(`${BASE}/products/search?q=${encodeURIComponent(q)}`);
   return data.products;

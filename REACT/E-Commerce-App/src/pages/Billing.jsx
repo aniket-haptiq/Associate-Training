@@ -15,7 +15,7 @@ const Billing = () => {
       <table className="table table-bordered table-striped text-center">
         <thead>
           <tr>
-            <th>Product</th>
+            <th>Product Name</th>
             <th>Image</th>
             <th>Qty</th>
             <th>Price</th>
