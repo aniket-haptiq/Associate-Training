@@ -25,8 +25,8 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-3 shadow-sm position-sticky top-0 z-3">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          <img src={vite} alt="AniketMart-Logo" className="d-inline-block align-top me-2" />
-          AniketMart
+          <img src={vite} alt="HaptiqMart-Logo" className="d-inline-block align-top me-2" />
+          HaptiqMart
         </Link>
 
         <button

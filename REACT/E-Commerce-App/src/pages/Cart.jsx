@@ -52,8 +52,8 @@ const Cart = () => {
                     </td>
                     <td>{item.title}</td>
                     <td>{item.qty}</td>
-                    <td>₹{item.price}</td>
-                    <td>₹{item.price * item.qty}</td>
+                    <td>${item.price}</td>
+                    <td>${item.price * item.qty}</td>
                     <td>
                       <button
                         className="btn btn-sm btn-danger"

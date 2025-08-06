@@ -21,7 +21,7 @@ const Home = () => {
     <div className="card-body text-center py-5">
       <h2 className="card-title mb-3 fw-bold text-dark">
         Welcome to <span className="text-primary">
-          <img src={vite} alt="AniketMart-Logo" className="d-inline-block align-top me-2" width="32" />AniketMart
+          <img src={vite} alt="HaptiqMart-Logo" className="d-inline-block align-top me-2" width="32" />HaptiqMart
         </span>
       </h2>
       <p className="card-text fs-5 text-secondary">
@@ -63,7 +63,7 @@ const Home = () => {
         />
         <div className="card-body p-2 text-center">
           <h6 className="card-title text-truncate text-dark fw-semibold">{product.title}</h6>
-          <p className="card-text text-success fw-medium">₹{product.price}</p>
+          <p className="card-text text-success fw-medium">${product.price}</p>
           <p className="card-text fw-medium">Rating | {product.rating}</p>
         </div>
       </div>
@@ -71,7 +71,7 @@ const Home = () => {
   </div>
 
   {/* Why Choose Us */}
-  <h4 className="mb-3 text-dark">Why AniketMart?</h4>
+  <h4 className="mb-3 text-dark">Why HaptiqMart?</h4>
   <div className="row mb-5">
     {[
       {

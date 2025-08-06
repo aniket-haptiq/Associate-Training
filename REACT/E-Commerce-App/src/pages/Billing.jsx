@@ -33,15 +33,15 @@ const Billing = () => {
                       />
               </td>
               <td>{item.qty}</td>
-              <td>₹{item.price}</td>
-              <td>₹{item.price * item.qty}</td>
+              <td>${item.price}</td>
+              <td>${item.price * item.qty}</td>
             </tr>
           ))}
         </tbody>
         <tfoot>
           <tr>
             <th colSpan="4"><h3>Grand Total</h3></th>
-            <th><h3>₹{grandTotal}</h3></th>
+            <th><h3>${grandTotal}</h3></th>
           </tr>
           <tr>
             <td colSpan="5" className="text-start">Date: {currentDate}</td>

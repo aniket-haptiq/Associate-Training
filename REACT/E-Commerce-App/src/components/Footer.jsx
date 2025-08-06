@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="col-md-4">
             <div className="logo">
                 <img src={vite} alt="AniketMart-Logo" width="75" height="75" className="d-inline-block align-top me-2" />
-                <h5>AniketMart</h5>
+                <h5>HaptiqMart</h5>
             </div>
             <p>Your one-stop shop for all your needs.</p>
 
@@ -25,12 +25,12 @@ const Footer = () => {
           </div>
           <div className="col-md-4">
             <h5>Contact</h5><hr />
-            <p>Email: support@aniketmart.com</p>
+            <p>Email: support@haptiqmart.com</p>
             <p>Phone: +91 98765 43210</p>
           </div>
         </div>
         <hr className="border-light" />
-        <p className="mb-0">&copy; {new Date().getFullYear()} AniketMart. All rights reserved.</p>
+        <p className="mb-0">&copy; {new Date().getFullYear()} HaptiqMart. All rights reserved.</p>
       </div>
     </footer>    
 

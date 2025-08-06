@@ -20,6 +20,10 @@ const ProductList = () => {
     navigate('/billing', { state: { directBuy: [{ ...product, qty }] } });
   };
 
+  const handleNavigateToDetails = (id) => {
+    navigate(`/products/${id}`);
+  };
+
   return (
     <div className="row">
       {products.map(product => {
@@ -30,12 +34,30 @@ const ProductList = () => {
         return (
           <div key={product.id} className="col-md-4 mb-4">
             <div className="card h-100 shadow-sm">
-              <img src={imgSrc} className="card-img-top" alt={product.title} />
+              
+              {/* 👇 Clickable Image for Details */}
+              <img
+                src={imgSrc}
+                className="card-img-top"
+                alt={product.title}
+                style={{ cursor: 'pointer' }}
+                onClick={() => handleNavigateToDetails(product.id)}
+              />
+
               <div className="card-body d-flex flex-column">
-                <h5 className="card-title">{product.title}</h5>
-               
-                 <p className="card-text">Rating | {product.rating}</p>
-               <div className="input-group mb-2" style={{ maxWidth: '150px' }}>
+                
+                {/* 👇 Clickable Title for Details */}
+                <h5
+                  className="card-title"
+                  style={{ cursor: 'pointer' }}
+                  onClick={() => handleNavigateToDetails(product.id)}
+                >
+                  {product.title}
+                </h5>
+
+                <p className="card-text">Rating | {product.rating || 'N/A'}</p>
+
+                <div className="input-group mb-2" style={{ maxWidth: '150px' }}>
                   <button
                     className="btn btn-outline-secondary"
                     type="button"
@@ -43,12 +65,12 @@ const ProductList = () => {
                   >
                     -
                   </button>
-                        <input
-                          type="text"
-                          className="form-control text-center"
-                          value={qty}
-                          readOnly
-                        />
+                  <input
+                    type="text"
+                    className="form-control text-center"
+                    value={qty}
+                    readOnly
+                  />
                   <button
                     className="btn btn-outline-secondary"
                     type="button"
@@ -56,9 +78,9 @@ const ProductList = () => {
                   >
                     +
                   </button>
-                  
-              </div>
-              <p className="card-text">₹{product.price}</p>
+                </div>
+
+                <p className="card-text">${product.price}</p>
 
                 <div className="mt-auto">
                   <button className="btn btn-primary me-2" onClick={() => dispatch(addItem({ ...product, qty }))}>
