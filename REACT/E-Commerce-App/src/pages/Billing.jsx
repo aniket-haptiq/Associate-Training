@@ -49,7 +49,7 @@ const Billing = () => {
         </tfoot>
       </table>
 
-      <form className="mt-5 bg-dark text-light p-4 rounded">
+      <form className="mt-5 mb-5 bg-dark text-light p-4 rounded">
         <h5 className="text-center mb-3">Shipping Details</h5>
         <input type="text" className="form-control mb-2" placeholder="Full Name" required />
         <input type="text" className="form-control mb-2" placeholder="Address" required />
