@@ -33,7 +33,7 @@ const ProductDetails = () => {
               <p><strong>Weight:</strong> {product.weight}g</p>
             </div>
             <div>
-              <p><strong>Dimensions:</strong> {product.dimensions.width} x {product.dimensions.height} x {product.dimensions.depth} cm</p>
+              <p><strong>Dimensions:</strong> {product.dimensions?.width} x {product.dimensions?.height} x {product.dimensions?.depth} cm</p>
               <p><strong>Warranty:</strong> {product.warrantyInformation}</p>
               <p><strong>Shipping:</strong> {product.shippingInformation}</p>
               <p><strong>Availability:</strong> {product.availabilityStatus}</p>

@@ -28,7 +28,7 @@ const ProductList = () => {
     <div className="row">
       {products.map(product => {
         const inWishlist = wishlist.some(w => w.id === product.id);
-        const imgSrc = product.thumbnail || product.images?.[0] || '/placeholder.png';
+        const imgSrc = product.thumbnail || product.images?.[0];
         const qty = qtyMap[product.id] || 1;
 
         return (

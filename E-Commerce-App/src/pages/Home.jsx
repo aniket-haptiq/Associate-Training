@@ -12,8 +12,7 @@ const Home = () => {
     dispatch(loadCategories());
   }, [dispatch]);
 
-  const newArrivals = products.slice(-15); // last 5 as mock "New Arrivals"
-
+  const newArrivals = products.slice(-15);
   return (
 <div className="container">
 

@@ -11,7 +11,7 @@ const Signup = () => {
 
   const handleSignup = (e) => {
     e.preventDefault();
-    dispatch(login({ email, name })); // Simulated sign up
+    dispatch(login({ email, name }));
     navigate('/');
   };
 

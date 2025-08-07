@@ -16,3 +16,11 @@ export const searchProducts = async (q) => {
   const { data } = await axios.get(`${BASE}/products/search?q=${encodeURIComponent(q)}`);
   return data.products;
 };
+
+export const loginUser = async ({ username, password }) => {
+  const { data } = await axios.post(`${BASE}/auth/login`, {
+    username,
+    password,
+  });
+  return data;
+};
