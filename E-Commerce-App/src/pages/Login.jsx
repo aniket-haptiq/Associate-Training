@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    dispatch(login({ email })); // Simulated login
+    dispatch(login({ email,password })); // Simulated login
     navigate('/');
   };
 
