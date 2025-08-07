@@ -10,10 +10,15 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
-    e.preventDefault();
-    dispatch(login({ email,password })); // Simulated login
+  e.preventDefault();
+  if (email === 'admin@gmail.com' && password === 'admin123') {
+    dispatch(login({ email }));
     navigate('/');
-  };
+  } else {
+    alert('Invalid credentials');
+  }
+};
+
 
   return (
     <div className="container mt-5 mb-5 bg-dark text-light text-center py-3 rounded" style={{ maxWidth: '400px' }}>
