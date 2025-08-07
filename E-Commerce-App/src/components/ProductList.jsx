@@ -35,7 +35,6 @@ const ProductList = () => {
           <div key={product.id} className="col-md-4 mb-4">
             <div className="card h-100 shadow-sm">
               
-              {/* 👇 Clickable Image for Details */}
               <img
                 src={imgSrc}
                 className="card-img-top"
@@ -45,8 +44,6 @@ const ProductList = () => {
               />
 
               <div className="card-body d-flex flex-column">
-                
-                {/* 👇 Clickable Title for Details */}
                 <h5
                   className="card-title"
                   style={{ cursor: 'pointer' }}
