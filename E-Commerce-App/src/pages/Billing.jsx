@@ -48,7 +48,7 @@ const Billing = () => {
           </tr>
         </tfoot>
       </table>
-
+        {/* Currently we are not handling any event on form it just static UI */}
       <form className="mt-5 mb-5 bg-dark text-light p-4 rounded">
         <h5 className="text-center mb-3">Shipping Details</h5>
         <input type="text" className="form-control mb-2" placeholder="Full Name" required />

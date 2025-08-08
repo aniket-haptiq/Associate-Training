@@ -67,6 +67,7 @@ const ProductList = () => {
                     className="form-control text-center"
                     value={qty}
                     readOnly
+                    aria-label="Quantity"
                   />
                   <button
                     className="btn btn-outline-secondary"

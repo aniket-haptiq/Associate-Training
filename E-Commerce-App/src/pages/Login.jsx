@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../api/productsApi'; 
 
 const Login = () => {
-  const [username, setUsername] = useState('emilys');
-  const [password, setPassword] = useState('emilyspass');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const Login = () => {
       localStorage.setItem('user', JSON.stringify(data));
       navigate('/');
     } catch (error) {
-      
+
       if (!import.meta.env.PROD) {
         console.error('Login error (dev):', error.message || error);
       } else {

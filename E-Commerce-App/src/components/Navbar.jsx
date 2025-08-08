@@ -38,7 +38,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-3 shadow-sm position-sticky top-0 z-3">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-3 shadow-sm position-sticky top-0 z-3" role="navigation" aria-label="Main navigation">
       <div className="container">
         <Link className="navbar-brand" to="/">
           <img src={vite} alt="HaptiqMart-Logo" className="d-inline-block align-top me-2" />
