@@ -21,8 +21,8 @@ const Login = () => {
       localStorage.setItem('user', JSON.stringify(data));
       navigate('/');
     } catch (error) {
-      // eslint-disable-next-line no-undef
-      if (process.env.NODE_ENV !== 'production') {
+     
+      if (import.meta.env.MODE !== 'production') {
         console.error('Login error:', error);
       } else {
         console.error('Login error occurred');

@@ -25,7 +25,7 @@ const Products = () => {
 
   return (
     <div className="container">
-      <div className="flex-wrap ">
+      <div className="flex-wrap">
        <div className="my-4 d-flex gap-3">
         <input
           type="text"
