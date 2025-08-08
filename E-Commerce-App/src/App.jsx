@@ -6,7 +6,6 @@ import ProductDetails from './pages/ProductDetails';
 import Cart from './pages/Cart';
 import Wishlist from './pages/Wishlist';
 import Login from './pages/Login';
-import Signup from './pages/Signup';
 import Billing from './pages/Billing';
 import NotFound from './pages/NotFound';
 import PrivateRoute from './components/PrivateRoute';
@@ -21,7 +20,6 @@ const App = createBrowserRouter([
       { path: 'products', element: <Products /> },
       { path: 'products/:id', element: <ProductDetails /> },
       { path: 'login', element: <Login /> },
-      { path: 'signup', element: <Signup /> },
 
       {
         element: <PrivateRoute />,

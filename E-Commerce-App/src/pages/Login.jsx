@@ -7,29 +7,61 @@ import { loginUser } from '../api/productsApi';
 const Login = () => {
   const [username, setUsername] = useState('emilys');
   const [password, setPassword] = useState('emilyspass');
+  const [errorMessage, setErrorMessage] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
+    setErrorMessage('');
+        
     try {
       const data = await loginUser({ username, password });
       dispatch(login({ user: data, token: data.token }));
+      localStorage.setItem('user', JSON.stringify(data));
       navigate('/');
     } catch (error) {
-      console.error('Login error:', error);
-      alert('Invalid username or password');
+      // eslint-disable-next-line no-undef
+      if (process.env.NODE_ENV !== 'production') {
+        console.error('Login error:', error);
+      } else {
+        console.error('Login error occurred');
+      }
+      setErrorMessage('Invalid username or password');
     }
+
   };
 
   return (
     <div className="container mt-5 mb-5 bg-dark text-light text-center py-3 rounded" style={{ maxWidth: '400px' }}>
       <h3 className="mb-4">Login</h3>
+
+      {errorMessage && (
+        <div className="alert alert-danger" role="alert">
+          {errorMessage}
+        </div>
+      )}
+
       <form onSubmit={handleLogin}>
-        <input type="text" className="form-control mb-3" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} required />
-        <input type="password" className="form-control mb-3" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required />
-        <button className="btn btn-primary w-100" type="submit">Login</button>
+        <input
+          type="text"
+          className="form-control mb-3"
+          placeholder="Username"
+          value={username}
+          onChange={e => setUsername(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          className="form-control mb-3"
+          placeholder="Password"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+          required
+        />
+        <button className="btn btn-primary w-100" type="submit">
+          Login
+        </button>
       </form>
     </div>
   );
