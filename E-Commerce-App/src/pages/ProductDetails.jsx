@@ -1,20 +1,30 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { createSelector } from '@reduxjs/toolkit';
+
+const selectProductById = createSelector(
+  [(state) => state.products.list, (_, id) => id],
+  (products, id) => products.find((p) => p.id.toString() === id)
+);
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const product = useSelector(s => s.products.list.find(p => p.id.toString() === id));
+  const product = useSelector((state) => selectProductById(state, id));
 
   if (!product) return <p>Loading product...</p>;
 
   return (
     <div className="container mt-3">
       <div className="row gap-5">
-
         <div className="col-sm-5 text-center border">
-          <img src={product.images?.[0]} alt={product.title} className="img-fluid rounded shadow-sm" />
-          <Link to="/products" className="btn btn-outline-primary mt-2 mb-1">← Back to Products</Link>
+          <img
+            src={product.images?.[0]}
+            alt={product.title}
+            className="img-fluid rounded shadow-sm"
+          />
+          <Link to="/products" className="btn btn-outline-primary mt-2 mb-1">
+            ← Back to Products
+          </Link>
         </div>
 
         <div className="col-md-6">
@@ -43,30 +53,28 @@ const ProductDetails = () => {
           </div>
 
           <div className="mt-3 d-flex align-items-center gap-5">
-              {product.tags && product.tags.length > 0 && (        
-                  <div>
-                    <h6>Tags:</h6>
-                    {product.tags.map((tag, i) => (
-                      <span key={i} className="badge bg-secondary me-2">{tag}</span>
-                    ))}
-                  </div>
-              )}            
+            {product.tags?.length > 0 && (
               <div>
-                <h6>Barcode:</h6>
-                <p>{product.meta?.barcode}</p>
+                <h6>Tags:</h6>
+                {product.tags.map((tag, i) => (
+                  <span key={i} className="badge bg-secondary me-2">{tag}</span>
+                ))}
               </div>
-              <div>
-                <h6>QR Code:</h6>
-                <img src={product.meta?.qrCode} alt="QR Code" style={{ height: '80px' }} />
-              </div>
+            )}
+            <div>
+              <h6>Barcode:</h6>
+              <p>{product.meta?.barcode}</p>
             </div>
+            <div>
+              <h6>QR Code:</h6>
+              <img src={product.meta?.qrCode} alt="QR Code" style={{ height: '80px' }} />
+            </div>
+          </div>
         </div>
       </div>
 
-
       <div className="mt-3">
         <h4 className="mb-4">Customer Reviews</h4>
-
         {product.reviews?.length === 0 ? (
           <p className="text-muted">No reviews yet.</p>
         ) : (

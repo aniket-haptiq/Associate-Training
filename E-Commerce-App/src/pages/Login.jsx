@@ -14,22 +14,22 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     setErrorMessage('');
-        
+
     try {
       const data = await loginUser({ username, password });
       dispatch(login({ user: data, token: data.token }));
       localStorage.setItem('user', JSON.stringify(data));
       navigate('/');
     } catch (error) {
-     
+      
       if (!import.meta.env.PROD) {
-        console.error('Login error:', error);
+        console.error('Login error (dev):', error.message || error);
       } else {
         console.error('Login error occurred');
       }
+
       setErrorMessage('Invalid username or password');
     }
-
   };
 
   return (
