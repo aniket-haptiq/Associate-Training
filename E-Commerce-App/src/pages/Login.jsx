@@ -22,7 +22,7 @@ const Login = () => {
       navigate('/');
     } catch (error) {
      
-      if (import.meta.env.MODE !== 'production') {
+      if (!import.meta.env.PROD) {
         console.error('Login error:', error);
       } else {
         console.error('Login error occurred');
