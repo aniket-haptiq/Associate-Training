@@ -18,6 +18,7 @@ const App = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: 'products', element: <Products /> },
+      { path: 'wishlist', element: <Wishlist /> },
       { path: 'products/:id', element: <ProductDetails /> },
       { path: 'login', element: <Login /> },
 
@@ -25,7 +26,6 @@ const App = createBrowserRouter([
         element: <PrivateRoute />,
         children: [
           { path: 'cart', element: <Cart /> },
-          { path: 'wishlist', element: <Wishlist /> },
           { path: 'billing', element: <Billing /> },
         ],
       },

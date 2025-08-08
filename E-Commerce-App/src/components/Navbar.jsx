@@ -53,7 +53,7 @@ const Navbar = () => {
           <ul className="navbar-nav me-auto">
             <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/products">Products</Link></li>
-            {user && <li className="nav-item"><Link className="nav-link" to="/wishlist">Wishlist</Link></li>}
+            <li className="nav-item"><Link className="nav-link" to="/wishlist">Wishlist</Link></li>
             {user && <li className="nav-item"><Link className="nav-link" to="/cart">🛒 Cart ({cart.length})</Link></li>}
             {user && <li className="nav-item"><Link className="nav-link" to="/billing">Billing</Link></li>}
           </ul>
