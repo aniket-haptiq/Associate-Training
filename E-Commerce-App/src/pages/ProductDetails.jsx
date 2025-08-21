@@ -67,7 +67,7 @@ const ProductDetails = () => {
             </div>
             <div>
               <h6>QR Code:</h6>
-              <img src={product.meta?.qrCode} alt="QR Code" style={{ height: '80px' }} />
+              <img src={product.meta?.qrCode} alt="QR Code" style={{ height: '100px' }} />
             </div>
           </div>
         </div>
